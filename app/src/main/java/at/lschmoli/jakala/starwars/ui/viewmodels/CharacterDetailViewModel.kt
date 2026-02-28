@@ -6,11 +6,13 @@ import androidx.lifecycle.viewModelScope
 import at.lschmoli.jakala.starwars.models.Character
 import at.lschmoli.jakala.starwars.repositories.DefaultStarWarsRepository
 import at.lschmoli.jakala.starwars.repositories.StarWarsRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+@HiltViewModel
 class CharacterDetailViewModel @Inject constructor(
     private val repository: StarWarsRepository,
     savedStateHandle: SavedStateHandle
