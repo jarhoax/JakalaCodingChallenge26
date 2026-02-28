@@ -27,9 +27,10 @@ import at.lschmoli.jakala.starwars.R
 import at.lschmoli.jakala.starwars.ui.theme.ThemeState
 import at.lschmoli.jakala.starwars.ui.viewmodels.AllCharactersViewModel
 import at.lschmoli.jakala.starwars.ui.viewmodels.UiState
+import kotlinx.serialization.InternalSerializationApi
 
 @Composable
-@OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class, InternalSerializationApi::class)
 fun AllCharactersScreen(
     onCharacterClick: (Int) -> Unit,
     viewModel: AllCharactersViewModel = hiltViewModel()
